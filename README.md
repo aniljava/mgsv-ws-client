@@ -1,4 +1,4 @@
-mgsv-ws-client
+mgsv-ws-client 1.0-RC3
 ==============
 
 Client application for mGSV Web Service. This application act as a guide for the mGSV Web Service as well as a fully functional file upload tool. Application is implemented in Java, and requires JVM or JDK 1.6+ to run.
@@ -28,18 +28,18 @@ The main class is **src/main/edu/unt/mgsv/uploader/UploadFile.java**. The code i
 
 #### Binary
 Requirements
-1. JVM or JDK 1.6+
+1. JVM or JDK 1.5+
 
-Download prebuilt jar from : <https://github.com/downloads/aniljava/mgsv-ws-clientdemo/clientdemo-1.0-RC2-jar-with-dependencies.jar>
+Download prebuilt jar from : <https://github.com/downloads/aniljava/mgsv-ws-clientdemo/clientdemo-1.0-RC3-jar-with-dependencies.jar>
 Execute the jar with arguments and configuration (See Configuration/Arguments Section Below)
 
 Example
-	java -jar clientdemo-1.0-RC2-jar-with-dependencies.jar synteny.txt annotation.txt sample@sample.com
-	java -jar clientdemo-1.0-RC2-jar-with-dependencies.jar http://cas-bioinfo.cas.unt.edu/mgsv/sample_synteny.txt http://cas-bioinfo.cas.unt.edu/mgsv/sample_annotation.txt sample@sample.com
+	java -jar clientdemo-1.0-RC3-jar-with-dependencies.jar synteny.txt annotation.txt sample@sample.com
+	java -jar clientdemo-1.0-RC3-jar-with-dependencies.jar http://cas-bioinfo.cas.unt.edu/mgsv/sample_synteny.txt http://cas-bioinfo.cas.unt.edu/mgsv/sample_annotation.txt sample@sample.com
 
 #### Building from Source
 Requirements
-1. JDK 1.6+ <http://java.sun.com>
+1. JDK 1.5+ <http://java.sun.com>
 2. Maven 3.0+ <http://maven.apache.org/>
 
 If [git](http://git-scm.com/) is present
@@ -56,8 +56,8 @@ From Source archive without git
 	tar -xzf mgsv-client.tar.gz
 	cd mgsv-ws-client
 	mvn package
-	cp target/clientdemo-1.0-RC2-jar-with-dependencies.jar ./
-	java -jar clientdemo-1.0-RC1-jar-with-dependencies.jar [ARGUMENTS]
+	cp target/clientdemo-1.0-RC3-jar-with-dependencies.jar ./
+	java -jar clientdemo-1.0-RC3-jar-with-dependencies.jar [ARGUMENTS]
 
 
 ### Configuration and Installation
