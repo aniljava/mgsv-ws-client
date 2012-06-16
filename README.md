@@ -28,14 +28,14 @@ The main class is **src/main/edu/unt/mgsv/uploader/UploadFile.java**. The code i
 
 #### Binary
 Requirements
-1. JVM or JDK 1.5+
+1. JVM or JDK 1.6+
 
-Download prebuilt jar from : <https://github.com/downloads/aniljava/mgsv-ws-clientdemo/clientdemo-1.0-RC3-jar-with-dependencies.jar>
+Download prebuilt jar from : <https://github.com/downloads/aniljava/mgsv-ws-client/ws-client-1.0-RC3-jar-with-dependencies.jar>
 Execute the jar with arguments and configuration (See Configuration/Arguments Section Below)
 
 Example
-	java -jar clientdemo-1.0-RC3-jar-with-dependencies.jar synteny.txt annotation.txt sample@sample.com
-	java -jar clientdemo-1.0-RC3-jar-with-dependencies.jar http://cas-bioinfo.cas.unt.edu/mgsv/sample_synteny.txt http://cas-bioinfo.cas.unt.edu/mgsv/sample_annotation.txt sample@sample.com
+	java -jar ws-client-1.0-RC3-jar-with-dependencies.jar synteny.txt annotation.txt sample@sample.com
+	java -jar ws-client-1.0-RC3-jar-with-dependencies.jar http://cas-bioinfo.cas.unt.edu/mgsv/sample_synteny.txt http://cas-bioinfo.cas.unt.edu/mgsv/sample_annotation.txt sample@sample.com
 
 #### Building from Source
 Requirements
@@ -44,20 +44,20 @@ Requirements
 
 If [git](http://git-scm.com/) is present
 
-	git clone https://github.com/aniljava/mgsv-ws-clientdemo.git
-	cd mgsv-ws-clientdemo
+	git clone https://github.com/aniljava/mgsv-ws-client.git
+	cd mgsv-ws-client
 	mvn package
-	cp target/clientdemo-1.0-RC2-jar-with-dependencies.jar ./
-	java -jar clientdemo-1.0-RC1-jar-with-dependencies.jar [ARGUMENTS]
+	cp target/ws-client-1.0-RC3-jar-with-dependencies.jar ./
+	java -jar ws-client-1.0-RC3-jar-with-dependencies.jar [ARGUMENTS]
 
 From Source archive without git
 
-	wget https://github.com/downloads/aniljava/mgsv-ws-clientdemo/mgsv-client.tar.gz
-	tar -xzf mgsv-client.tar.gz
+	wget https://github.com/downloads/aniljava/mgsv-ws-client/mgsv-ws-client.tar.gz
+	tar -xzf mgsv-ws-client.tar.gz
 	cd mgsv-ws-client
 	mvn package
-	cp target/clientdemo-1.0-RC3-jar-with-dependencies.jar ./
-	java -jar clientdemo-1.0-RC3-jar-with-dependencies.jar [ARGUMENTS]
+	cp target/ws-client-1.0-RC3-jar-with-dependencies.jar ./
+	java -jar ws-client-1.0-RC3-jar-with-dependencies.jar [ARGUMENTS]
 
 
 ### Configuration and Installation
