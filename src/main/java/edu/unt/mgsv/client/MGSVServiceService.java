@@ -26,14 +26,18 @@ public class MGSVServiceService
     private final static WebServiceException MGSVSERVICESERVICE_EXCEPTION;
     private final static QName MGSVSERVICESERVICE_QNAME = new QName("http://mgsv.unt.edu/", "MGSVServiceService");
 
+    
+    
+    
     static {
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("http://localhost:8081/MGSVService?wsdl");
+            url = new URL(WSDLLocation.WSDL);
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }
+        System.out.println(url);
         MGSVSERVICESERVICE_WSDL_LOCATION = url;
         MGSVSERVICESERVICE_EXCEPTION = e;
     }

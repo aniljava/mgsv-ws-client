@@ -10,6 +10,7 @@ import javax.xml.ws.BindingProvider;
 
 import edu.unt.mgsv.client.MGSVService;
 import edu.unt.mgsv.client.MGSVServiceService;
+import edu.unt.mgsv.client.WSDLLocation;
 
 public class UploadFile {
 	public static void main(String[] args) throws Exception {
@@ -19,19 +20,33 @@ public class UploadFile {
 			args = new String[] { "s.gz", "a.gz" };
 
 		}
-
-		MGSVServiceService service = new MGSVServiceService();
-		MGSVService impl = service.getMGSVServicePort();
-
+		
+		String remote = null ;
+		String wsdl = null;
+		
+		
 		// Alternate remote url if it exists
 		if (new File("config.properties").exists()) {
 			Properties config = new Properties();
-			config.load(new FileInputStream("confi.properties"));
-			String remote = config.getProperty("remote");
-			if (remote != null) {
-				((BindingProvider) impl).getRequestContext().put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY, remote);
-			}
+			config.load(new FileInputStream("config.properties"));
+			remote = config.getProperty("remote");
+			wsdl = config.getProperty("wsdl");			
+		}		
+		
+		if(wsdl != null){
+			WSDLLocation.WSDL = wsdl;
+		}	
+		
+		MGSVServiceService service = new MGSVServiceService();
+		MGSVService impl = service.getMGSVServicePort();
+		
+		
+		if(remote != null){
+			((BindingProvider) impl).getRequestContext().put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY, remote);
 		}
+
+		
+		
 
 		String result = "-1";
 
